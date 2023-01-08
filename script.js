@@ -2,6 +2,7 @@ const gridContainer = document.getElementById('grid-container');
 const btn10 = document.getElementById('grid-10x10');
 const btn30 = document.getElementById('grid-30x30');
 const btn50 = document.getElementById('grid-50x50');
+const btnClear = document.getElementById('grid-clear');
 let gridHeight = 10;
 let gridWidth = 10;
 let gridSize = gridHeight * gridWidth;
@@ -69,6 +70,14 @@ btn50.addEventListener('click', () =>
     gridHeight = 50;
     gridWidth = 50;
     gridSize = gridHeight * gridWidth;
+
+    setGridContainerStyles(gridHeight, gridWidth);
+    createGrid(gridSize);
+    changeCellColor(cellColor, gridSize);
+});
+
+btnClear.addEventListener('click', () =>{
+    gridContainer.replaceChildren();
 
     setGridContainerStyles(gridHeight, gridWidth);
     createGrid(gridSize);
