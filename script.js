@@ -1,10 +1,11 @@
 const gridContainer = document.getElementById('grid-container');
-let gridHeight = 8;
-let gridWidth = 8;
+let gridHeight = 50;
+let gridWidth = 50;
 let gridSize = gridHeight * gridWidth;
 
 function setGridContainerStyles(height, width)
-{    
+{
+    gridContainer.style.display = `grid`;    
     gridContainer.style.gridTemplateColumns = `repeat(${width}, auto)`;
     gridContainer.style.gridTemplateRows = `repeat(${height}, auto)`;
 }
